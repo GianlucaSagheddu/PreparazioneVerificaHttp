@@ -9,7 +9,7 @@ import { Visita } from './visita/visita.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  articles: Visita[] = [];   // <-- component property
+  Visite: Visita[] = [];   // <-- component property
   data: Object ={};
   loading: boolean;
   o :Observable<Visita[]>;
@@ -21,10 +21,10 @@ export class AppComponent {
   }
 
   makeTypedRequest(): void {
-    this.o = this.http.get<Article[]>('https://jsonplaceholder.typicode.com/posts');
+    this.o = this.http.get<Visita[]>('');
     this.o.subscribe(data => {
         for(var i = 0; i < data.length; i++){
-          this.articles.push(new Article(data[i].userId, data[i].id, data[i].title, data[i].body));
+          //this.Visite.push(new Visita(data[i].userId));
 
           }
 
