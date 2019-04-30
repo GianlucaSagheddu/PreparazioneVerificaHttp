@@ -32,4 +32,38 @@ export class AppComponent {
 
    }
 
+  makeCompactPost(Nome: string, Cognome: string, Indirizzo: string, Tel: string, Email: string): void {
+    this.loading = true;
+    this.http
+    .post('https://jsonplaceholder.typicode.com/posts',
+    JSON.stringify({
+      Nome: Nome,
+      Cognome: Cognome,
+      Ind: Indirizzo,
+      Tel: Tel,
+      Email: Email
+
+    })
+    )
+    .subscribe(data => {
+      //console.log(this.data);
+      this.data = data;
+
+      this.loading = false;
+    });
+  }
+
+
+    Inserisci(nome: HTMLInputElement, cognome: HTMLInputElement, ind: HTMLInputElement, tel: HTMLInputElement, mail: HTMLInputElement): boolean {
+
+      let id = 0;
+      this.makeCompactPost(nome.value, cognome.value, ind.value, tel.value, mail.value);
+      //id = this.data.id;
+
+      this.Visite.push(new Visita(nome.value, cognome.value, ind.value, tel.value, mail.value));
+
+
+      return false;
+    }
+
 }
