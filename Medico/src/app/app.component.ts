@@ -13,11 +13,17 @@ export class AppComponent {
   data: Object ={};
   loading: boolean;
   o :Observable<Visita[]>;
+  selectedV: Visita;
+
 
   constructor(public http: HttpClient){
     this.makeTypedRequest();
 
 
+  }
+
+  onSelect(Visita: Visita): void {
+    this.selectedV = Visita;
   }
 
   makeTypedRequest(): void {
