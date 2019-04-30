@@ -27,10 +27,10 @@ export class AppComponent {
   }*/
 
   makeTypedRequest(): void {
-    this.o = this.http.get<Visita[]>('');
+    this.o = this.http.get<Visita[]>('https://my-json-server.typicode.com/Lucas2000s/InformaticaMilazzo/prenotazioni');
     this.o.subscribe(data => {
         for(var i = 0; i < data.length; i++){
-          //this.Visite.push(new Visita(data[i].userId));
+          this.Visite.push(new Visita(data[i].Nome, data[i].Cognome, data[i].Indirizzo, data[i].Telefono, data[i].Email, data[i].Data, data[i].Ora));
 
           }
 
@@ -41,7 +41,7 @@ export class AppComponent {
   makeCompactPost(Nome: string, Cognome: string, Indirizzo: string, Tel: string, Email: string): void {
     this.loading = true;
     this.http
-    .post('https://jsonplaceholder.typicode.com/posts',
+    .post('https://my-json-server.typicode.com/Lucas2000s/InformaticaMilazzo/prenotazioni',
     JSON.stringify({
       Nome: Nome,
       Cognome: Cognome,

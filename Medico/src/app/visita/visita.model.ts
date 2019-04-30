@@ -2,16 +2,17 @@ export class Visita {
   Nome: string;
   Cognome: string;
   Indirizzo: string;
-  Tel: string;
+  Telefono: string;
   Email: string;
-  Data: Date;
+  Data: string;
+  Ora: string;
 
 
   constructor(Nome: string, Cognome: string, Indirizzo: string, Tel: string, Email: string) {
     this.Nome = Nome;
     this.Cognome = Cognome;
     this.Indirizzo = Indirizzo;
-    this.Tel = Tel;
+    this.Telefono = Tel;
     this.Email = Email;
   }
 }
