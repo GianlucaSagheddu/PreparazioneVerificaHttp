@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Visita } from './visita.model';
+
 
 @Component({
   selector: 'app-visita',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./visita.component.css']
 })
 export class VisitaComponent implements OnInit {
-
+  @Input() V:Visita;
   constructor() { }
 
   ngOnInit() {
