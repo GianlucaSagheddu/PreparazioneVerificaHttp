@@ -8,7 +8,7 @@ import { Visita } from './visita.model';
   styleUrls: ['./visita.component.css']
 })
 export class VisitaComponent implements OnInit {
-  @Input() V:Visita;
+  @Input() Vs:Visita;
   constructor() { }
 
   ngOnInit() {

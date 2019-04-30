@@ -6,9 +6,13 @@ import { Visita } from '../visita/visita.model';
   styleUrls: ['./visita-list.component.css']
 })
 export class VisitaListComponent implements OnInit {
-  @Input() Vs:Visita;
+  @Input() V:Visita;
   constructor() { }
+  selectedV: Visita;
 
+  onSelect(Visita: Visita): void {
+    this.selectedV = Visita;
+  }
   ngOnInit() {
   }
 
