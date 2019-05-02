@@ -1,2 +1,6 @@
-<p (click)="onSelect(V)"> {{ V.Data }}  -->  {{ V.Nome }}  {{ V.Cognome }}</p>
+<p *ngFor="let vi of V" (click)="onSelect(vi)"> {{ vi.Data }} - {{ vi.Ora }} -->  {{ vi.Nome }}  {{ vi.Cognome }}</p>
+
+<br>
+<br>
+<br>
 <app-visita *ngIf="selectedV" [Vs]="selectedV"></app-visita>
