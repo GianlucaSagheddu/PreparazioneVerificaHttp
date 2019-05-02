@@ -13,6 +13,7 @@ export class AppComponent {
   data: Object ={};
   loading: boolean;
   o :Observable<Visita[]>;
+  mess: string;
   //selectedV: Visita;
 
 
@@ -81,6 +82,9 @@ export class AppComponent {
         mail.value="";
         data.value="";
         ora.value="";
+        this.mess="Inserito correttamente";
+      }else{
+        this.mess="Data e ora già inserite";
       }
 
       return false;
