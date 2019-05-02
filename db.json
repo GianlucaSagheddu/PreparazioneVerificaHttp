@@ -1,3 +1,5 @@
-[
-    {"Nome": "", "Cognome":""}
-]
+{"prenotazioni":
+    [
+        {"Nome": "", "Cognome":""}
+    ]
+}
