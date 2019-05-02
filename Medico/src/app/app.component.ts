@@ -67,7 +67,13 @@ export class AppComponent {
       //id = this.data.id;
 
       this.Visite.push(new Visita(nome.value, cognome.value, ind.value, tel.value, mail.value, data.value, ora.value));
-
+      nome.value="";
+      cognome.value="";
+      ind.value="";
+      tel.value="";
+      mail.value="";
+      data.value="";
+      ora.value="";
 
       return false;
     }
