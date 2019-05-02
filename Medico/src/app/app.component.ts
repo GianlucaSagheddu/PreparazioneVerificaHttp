@@ -60,13 +60,13 @@ export class AppComponent {
   }
 
 
-    Inserisci(nome: HTMLInputElement, cognome: HTMLInputElement, ind: HTMLInputElement, tel: HTMLInputElement, mail: HTMLInputElement): boolean {
+    Inserisci(nome: HTMLInputElement, cognome: HTMLInputElement, ind: HTMLInputElement, tel: HTMLInputElement, mail: HTMLInputElement, data: HTMLInputElement, ora: HTMLInputElement): boolean {
 
       let id = 0;
       this.makeCompactPost(nome.value, cognome.value, ind.value, tel.value, mail.value);
       //id = this.data.id;
 
-      this.Visite.push(new Visita(nome.value, cognome.value, ind.value, tel.value, mail.value));
+      this.Visite.push(new Visita(nome.value, cognome.value, ind.value, tel.value, mail.value, data.value, ora.value));
 
 
       return false;

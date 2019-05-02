@@ -1,15 +1,15 @@
 <div class="container">
-  Nome: <input type="text" name="nome" #nome><br>
-  Cognome: <input type="text" name="cognome" #cognome><br>
-  Indirizzo: <input type="text" name="ind" #ind><br>
-  Telefono: <input type="text" name="tel" #tel><br>
-  Email: <input type="mail" name="mail" #mail><br>
-  Data Prenotazione: <input type="date" name="data" #data><br>
-  Ora Prenotazione: <input type="time" name="ora" #ora><br>
-  <button ("click")="Inserisci(nome, cognome, ind, tel, mail, data, ora)">Inserisci</button><br>
+  Nome: <input type="text" name="nome" #nome> <br>
+  Cognome: <input type="text" name="cognome" #cognome> <br>
+  Indirizzo: <input type="text" name="ind" #ind> <br>
+  Telefono: <input type="text" name="tel" #tel> <br>
+  Email: <input type="mail" name="mail" #mail> <br>
+  Data Prenotazione: <input type="date" name="data" #data> <br>
+  Ora Prenotazione: <input type="time" name="ora" #ora> <br>
+  <button (click)="Inserisci(nome, cognome, ind, tel, mail, data, ora)"> Inserisci </button><br>
 </div>
 <br>
 <div class="container">
   <app-visita-list *ngFor="let vi of V" [V]="Visite"></app-visita-list>
 </div>
-<app-visita **ngIf="selectedV" [Vs]="selectedV"></app-visita>
+<!-- <app-visita *ngIf="selectedV" [Vs]="selectedV"></app-visita> -->
